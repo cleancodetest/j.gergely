@@ -75,7 +75,7 @@ public class PaymentLogic {
 	private int droppingMoney() throws UserCancelException{
 		int coin = 0;
 		while(coin == 0){
-			userInterface.print("Put a coin or a paper money to the machine (or type exit to cancel the process): ");
+			userInterface.print("Put a coin or a paper money to the machine: ");
 			try {
 				coin = moneyStorage.addMoneyToTempStorage(userInterface.userNumberInput());
 			} catch (InvalidDenominationException e) {

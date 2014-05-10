@@ -8,7 +8,8 @@ public class PaymentMachine {
 	private PaymentLogic paymentLogic = new PaymentLogic(ticketStorage, moneyStorage, userInterface);
 	
 	public void StartMachine(){
-		userInterface.print("Welcome! This is the a Parking Payment Machine! \n");
+		userInterface.print("Welcome! This is the a Parking Payment Machine!");
+		userInterface.print("(Print 'exit' to abort the paying process) \n");
 		do{
 			paymentLogic.paymentProcess();
 		}while(userInterface.askForAnotherPayment());

@@ -28,12 +28,12 @@ public class MoneyStorage {
 	@SuppressWarnings("serial")
 	private LinkedHashMap<Integer, Integer> availableDenominations = new LinkedHashMap<Integer, Integer>()
 			{{	put(20000, 0);
-				put(10000, 0); 
-				put(5000, 0); 
-				put(2000, 0);
-				put(1000, 0);
-				put(500, 0);
-				put(200, 0);
+				put(10000, 1); 
+				put(5000, 2); 
+				put(2000, 2);
+				put(1000, 2);
+				put(500, 5);
+				put(200, 5);
 				put(100, 10);
 				put(50, 10);
 				put(20, 10);
