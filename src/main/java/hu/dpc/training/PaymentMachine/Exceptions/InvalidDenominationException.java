@@ -4,7 +4,7 @@ package hu.dpc.training.PaymentMachine.Exceptions;
 public class InvalidDenominationException extends Exception{
 
 	public InvalidDenominationException() {
-		super();
+		super("The entered number is not a valid denomination.");
 	}
 
 }

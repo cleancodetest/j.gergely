@@ -4,6 +4,6 @@ package hu.dpc.training.PaymentMachine.Exceptions;
 public class UserCancelException extends Exception{
 
 	public UserCancelException() {
-	    super();
+	    super("You are canceled the paying! The transaction will be rollback.");
 	}
 }

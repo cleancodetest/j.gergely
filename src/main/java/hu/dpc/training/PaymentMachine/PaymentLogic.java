@@ -65,7 +65,7 @@ public class PaymentLogic {
 			try {	
 				droppedMoney += droppingMoney();
 			} catch(UserCancelException e) {
-				giveBackDroppedMoney("You are canceled the paying! The transaction will be rollback: ");
+				giveBackDroppedMoney(e.getMessage());
 				throw e;
 			}
 		}
@@ -79,7 +79,7 @@ public class PaymentLogic {
 			try {
 				coin = moneyStorage.addMoneyToTempStorage(userInterface.userNumberInput());
 			} catch (InvalidDenominationException e) {
-				userInterface.printError("This is not a valid denomination." + MoneyStorage.getValidDenominations());
+				userInterface.printError(e.getMessage());
 			}
 		}
 		return coin;
@@ -90,7 +90,7 @@ public class PaymentLogic {
 			List<Integer> change = moneyStorage.getChangeMoney(changeMoney);
 			userInterface.printChange(change.toString());
 		} catch (NotEnoughChangeException e) {
-			giveBackDroppedMoney("The machine dont have enough change! The transaction will be rollback: ");
+			giveBackDroppedMoney(e.getMessage());
 			throw e;
 		}
 	}

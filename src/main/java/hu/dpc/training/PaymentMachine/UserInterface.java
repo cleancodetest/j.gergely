@@ -29,7 +29,7 @@ public class UserInterface {
 		try {
 			number = Integer.parseInt(userInput());
 		} catch (NumberFormatException e) {
-			printError("This is not a number!");
+			printError("The writed text is not a number!");
 		}
 		return number;
 	}
@@ -41,7 +41,7 @@ public class UserInterface {
 			input = buffer.readLine();
 			checkTextIsACommand(input);
 		} catch (IOException e) {
-			printError("The Payment machine is broked down! Please make contact wint the operator! ");
+			printError("The Payment machine is broked down! Please make contact with the operator!");
 		}
 		return input;
 	}
@@ -53,7 +53,7 @@ public class UserInterface {
 	}
 
 	public void printChange(String change) {
-		print("Here is your change: " + change);
+		print("Change: " + change);
 	}
 
 	public boolean askForAnotherPayment() {
